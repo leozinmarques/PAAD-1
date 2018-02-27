@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
   if (connect(sockfd,(struct sockaddr *)&serv_addr,sizeof(serv_addr)) < 0)
     error("ERROR connecting");
   bzero(buffer,1024);
-  strcpy(buffer,"Oi servidor");
+  scanf("%s", buffer);
   n = write(sockfd,buffer,strlen(buffer));
   if (n < 0)
     error("ERROR writing to socket");
